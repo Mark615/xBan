@@ -1,0 +1,17 @@
+name: xBan
+main: de.mark615.xban.XBan
+version: 1.0
+description: Ban and Mute Plugin
+author: [Mark615 Happykobolt4]
+
+commands:
+  ban:
+    description: ban command
+    usage: /ban
+    aliases: [xban, xb]
+    default: op
+  mute:
+    description: mute command
+    usage: /mute
+    aliases: [xmute, xm]
+    default: op
