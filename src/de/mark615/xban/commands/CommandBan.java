@@ -1,7 +1,6 @@
 package de.mark615.xban.commands;
 
-import java.awt.Color;
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.Bukkit;
@@ -52,7 +51,7 @@ public class CommandBan extends XCommand
 		
 		if(matchPermission(sender, "xban.ban")) {
 			
-			List<String> worldNames = null;
+			List<String> worldNames = new ArrayList<>();
 			for(World world : Bukkit.getServer().getWorlds())
 			{
 				worldNames.add(world.getName());

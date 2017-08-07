@@ -1,4 +1,4 @@
-package de.mark615.xban.object;
+package de.mark615.xban.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.UUID;
+
+import de.mark615.xban.object.Ban;
+import de.mark615.xban.object.XUtil;
 
 public class XDatabase
 {
@@ -48,6 +51,11 @@ public class XDatabase
 		stmt = con.createStatement();
 		stmt.execute("CREATE TABLE IF NOT EXISTS xban (id INTEGER PRIMARY KEY, uuid TEXT not null, banLocation TEXT not null, banEnd INTEGER, banReason TEXT)");
 		stmt.close();
+	}
+	
+	public void addPlayerBan(Ban ban) throws SQLException
+	{
+		//TODO datenbank anpassen
 	}
 	
 	public void registerPlayerBan(UUID uuid, String banLocation) throws SQLException

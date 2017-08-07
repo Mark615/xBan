@@ -8,7 +8,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import de.mark615.xapi.object.XUtil;
-import de.mark615.xban.object.XDatabase;
+import de.mark615.xban.database.XDatabase;
 import de.mark615.xban.object.XPlayerSubject;
 
 public class XBanManager
