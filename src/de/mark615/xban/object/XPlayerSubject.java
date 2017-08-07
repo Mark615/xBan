@@ -8,10 +8,12 @@ import org.bukkit.entity.Player;
 public class XPlayerSubject
 {
 	private UUID uuid;
+	private int dbid;
 	
-	public XPlayerSubject(UUID uuid)
+	public XPlayerSubject(int dbid, UUID uuid)
 	{
 		this.uuid = uuid;
+		this.dbid = dbid;
 	}
 	
 	public UUID getUUID()
@@ -22,5 +24,9 @@ public class XPlayerSubject
 	public Player getPlayer()
 	{
 		return Bukkit.getPlayer(uuid);
+	}
+
+	public int getDbid() {
+		return dbid;
 	}
 }

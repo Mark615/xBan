@@ -81,6 +81,8 @@ public class XBan extends JavaPlugin
 	private void registerCommands()
 	{
 		commands.put("ban", new CommandBan(this));
+		//add other commands
+		
 	}
 
 	private boolean setupXApi() 

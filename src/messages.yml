@@ -1,14 +1,14 @@
 command:
-    description: 'commands'
+    description: 'xBan commands'
     nopermission: 'You don''t have permissions to run this command'
-    player-not-found: 'The Player can''t be found'
-    no-consol-command: 'This is a player command'
+    player-not-found: 'The player can''t be found'
     ban:
-        description: ''
+        description: 'Ban a player'
         success: ''
     mute:
-        description: ''
+        description: 'Mute a player'
         success: ''
         
         
 message:
+    
