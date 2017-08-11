@@ -10,8 +10,18 @@ commands:
     usage: /ban
     aliases: [xban, xb]
     default: op
+  unban:
+    description: unban command
+    usage: /unban
+    aliases: [xunban, xub]
+    default: op
   mute:
     description: mute command
     usage: /mute
     aliases: [xmute, xm]
+    default: op
+  unmute:
+    description: unmute command
+    usage: /unmute
+    aliases: [xunmute, xum]
     default: op

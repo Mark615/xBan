@@ -1,13 +1,41 @@
 command:
     description: 'xBan commands'
     nopermission: 'You don''t have permissions to run this command'
-    player-not-found: 'The player can''t be found'
+    player-not-found: 'The player couldn''t be found'
     ban:
         description: 'Ban a player'
-        success: ''
+        message:
+            perm: 'You are permanently banned from'
+            time: 'You are banned from'
+            expires: 'Your ban expires in'
+            reason: 'Reason for ban'
+        success: 'Player banned'
+    unban:
+        description: 'Unban a player'
+        message:
+            nobans: 'This player has no bans'
+        success: 'Player unbanned'
+    getbans:
+        description: 'Show all bans of a player'
+        message:
+            player: 'Bans for player'
     mute:
         description: 'Mute a player'
-        success: ''
+        message:
+            perm: 'You are permanently muted on'
+            time: 'You are muted on'
+            expires: 'Your mute expires in'
+            reason: 'Reason for mute'
+        success: 'Player muted'
+    unmute:
+        description: 'Unmute a player'
+        message:
+            nobans: 'This player has no mutes'
+        success: 'Player unmuted'
+    getbans:
+        description: 'Show all mutes of a player'
+        message:
+            player: 'Mutes for player'
         
         
 message:

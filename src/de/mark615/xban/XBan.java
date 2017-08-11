@@ -2,6 +2,7 @@ package de.mark615.xban;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -14,6 +15,7 @@ import de.mark615.xapi.XApi;
 import de.mark615.xapi.versioncheck.VersionCheck;
 import de.mark615.xapi.versioncheck.VersionCheck.XType;
 import de.mark615.xban.commands.CommandBan;
+import de.mark615.xban.commands.CommandMute;
 import de.mark615.xban.commands.XCommand;
 import de.mark615.xban.events.EventListener;
 import de.mark615.xban.object.XUtil;
@@ -81,6 +83,7 @@ public class XBan extends JavaPlugin
 	private void registerCommands()
 	{
 		commands.put("ban", new CommandBan(this));
+		commands.put("mute", new CommandMute(this));
 		//add other commands
 		
 	}

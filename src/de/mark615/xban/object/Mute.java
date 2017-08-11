@@ -3,40 +3,40 @@ package de.mark615.xban.object;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-public class Ban
+public class Mute
 {
 	private int id;
 	private UUID target;
 	private UUID sender;
-	private long banStart;
-	private long banEnd;
-	private String banLocation;
+	private long muteStart;
+	private long muteEnd;
+	private String muteLocation;
 	private String reason;
 	
-	public Ban(int id, Ban ban)
+	public Mute(int id, Mute mute)
 	{
 		this.id = id;
-		this.target = ban.getTarget();
-		this.sender = ban.getSender();
-		this.banStart = ban.getBanStart();
-		this.banEnd = ban.getBanEnd();
-		this.banLocation = ban.getBanLocation();
-		this.reason = ban.getReason();
+		this.target = mute.getTarget();
+		this.sender = mute.getSender();
+		this.muteStart = mute.getMuteStart();
+		this.muteEnd = mute.getMuteEnd();
+		this.muteLocation = mute.getMuteLocation();
+		this.reason = mute.getReason();
 	}
 	
-	public Ban(UUID target, UUID sender, long banTime, long banEnd, String banLocation, String reason)
+	public Mute(UUID target, UUID sender, long muteTime, long muteEnd, String muteLocation, String reason)
 	{
 		this.target = target;
 		this.sender = sender;
-		this.banStart = banTime;
-		this.banEnd = banEnd;
-		this.banLocation = banLocation;
+		this.muteStart = muteTime;
+		this.muteEnd = muteEnd;
+		this.muteLocation = muteLocation;
 		this.reason = reason;
 	}
 	
-	public Ban(int id, UUID target, UUID sender, long banStart, long banEnd, String banLocation, String reason)
+	public Mute(int id, UUID target, UUID sender, long muteStart, long muteEnd, String muteLocation, String reason)
 	{
-		this(target, sender, banStart, banEnd, banLocation, reason);
+		this(target, sender, muteStart, muteEnd, muteLocation, reason);
 		this.id = id;
 	}
 
@@ -55,14 +55,14 @@ public class Ban
 		return sender;
 	}
 
-	public long getBanStart()
+	public long getMuteStart()
 	{
-		return banStart;
+		return muteStart;
 	}
 
-	public long getBanEnd()
+	public long getMuteEnd()
 	{
-		return banEnd;
+		return muteEnd;
 	}
 
 	public String getReason()
@@ -70,13 +70,13 @@ public class Ban
 		return reason;
 	}
 
-	public String getBanLocation() {
-		return banLocation;
+	public String getMuteLocation() {
+		return muteLocation;
 	}
 	
-	public String getRemainingBanTime()
+	public String getRemainingMuteTime()
 	{
-		long seconds = banEnd;
+		long seconds = muteEnd;
 		seconds -= System.currentTimeMillis()/1000;
 		int day = (int) TimeUnit.SECONDS.toDays(seconds);
 		long hour = TimeUnit.SECONDS.toHours(seconds) - (day * 24);
@@ -85,5 +85,4 @@ public class Ban
 
 		return day + "d " + hour + "h " + minute + "m " + second + "s";
 	}
-	
 }
